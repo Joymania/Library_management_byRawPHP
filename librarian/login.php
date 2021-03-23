@@ -1,27 +1,22 @@
 <?php
-    require_once('../dbcon.php');
+
     session_start();
     if(isset($_SESSION['emailchecker'])){
         header('location:index.php');
     }
+    require_once('../dbcon.php');
     if(isset($_POST['login'])){
         $email=$_POST['email'];
         $password=$_POST['password'];
        
 
-        $emailchk=mysqli_query($con,"SELECT * FROM `students` WHERE `email`='$email'");
+        $emailchk=mysqli_query($con,"SELECT * FROM `librarians` WHERE `email`='$email'");
        
         if(mysqli_num_rows($emailchk)==1){
-            $row=mysqli_fetch_assoc($emailchk);
             $_SESSION['emailchecker']=$email;
-            if(($password ==$row['confirmpassword'])){
-                if($row['status']==1){
+            $row=mysqli_fetch_assoc($emailchk);
+            if(($password ==$row['password'])){
                     header('location:index.php');
-
-                }
-                else{
-                    $input_error2='Status Should be active.';
-                }
             }
              else{
             $input_error2='Credentials doesnot match our rechords.';
