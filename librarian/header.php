@@ -1,5 +1,5 @@
 <?php
-
+    require_once('../dbcon.php');
     session_start();
       $url=$_SERVER['PHP_SELF'];
       $url=explode('/',$url);
@@ -7,6 +7,11 @@
     if(!isset($_SESSION['emailchecker'])){
         header('location:login.php');
     }
+    $email=$_SESSION['emailchecker'];
+
+    $result=mysqli_query($con,"SELECT * FROM `students` WHERE `email` = '$email'");
+    $row=mysqli_fetch_assoc($result);
+
     
 ?>
 
@@ -30,6 +35,7 @@
     <link rel="stylesheet" href="../assets/vendor/toastr/toastr.min.css">
 
     <link rel="stylesheet" href="../assets/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/vendor/data-table/media/css/dataTables.bootstrap.min.css">
 
     <link rel="stylesheet" href="../assets/stylesheets/css/style.css">
 
@@ -60,10 +66,10 @@
                 <div class="header-section" id="user-headerbox">
                     <div class="user-header-wrap">
                         <div class="user-photo">
-                            <img alt="profile photo" src="../assets/images/avatar/avatar_user.jpg" />
+                            <img alt="profile photo" src="<?php echo "../student/images/". $row['photo']; ?>" />
                         </div>
                         <div class="user-info">
-                            <span class="user-name">Jane Doe</span>
+                            <span class="user-name"><?= $row['fname'].' '.$row['lname']?></span>
                             <span class="user-profile">Admin</span>
                         </div>
                         <i class="fa fa-plus icon-open" aria-hidden="true"></i>
@@ -105,7 +111,15 @@
                             <ul class="nav nav-left-lines" id="main-nav">
                                 <!--HOME-->
                                 <li  <?php if($url_name=='index.php') echo 'class="active-item"' ?> ><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
-                                <li <?php if($url_name=='test.php') echo 'class="active-item"' ?> ><a href="test.php"><i class="fa fa-home" aria-hidden="true"></i><span>test</span></a></li>
+                                <li <?php if($url_name=='Students.php') echo 'class="active-item"' ?> ><a href="Students.php"><i class="fa fa-home" aria-hidden="true"></i><span>Students</span></a></li>
+                                <li class="has-child-item close-item <?= ($url_name=='add_books.php' || $url_name=='manage_books.php' || $url_name=='update.php')? 'open-item' : '' ?> ">
+                                <a><i class="fa fa-book" aria-hidden="true"></i><span>Books</span></a>
+                                <ul class="nav child-nav level-1">
+                                    
+                                    <li <?php if($url_name=='add_books.php') echo 'class="active-item"' ?>><a  href="add_books.php">Add Books</a></li>
+                                    <li <?php if($url_name=='manage_books.php') echo 'class="active-item"' ?>><a  href="manage_books.php">Manage Books</a></li>
+                                </ul>
+                            </li>
 
                             </ul>
                         </nav>

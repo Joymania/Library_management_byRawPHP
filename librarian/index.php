@@ -1,7 +1,7 @@
 <?php
     require_once('header.php');
 ?>
-            <!-- CONTENT -->
+            <!-- CONTENT
             <!-- ========================================================= -->
             <div class="content">
                 <!-- content HEADER -->
@@ -11,7 +11,7 @@
                     <div class="leftside-content-header">
                         <ul class="breadcrumbs">
                             <li><i class="fa fa-home" aria-hidden="true"></i><a href="#">Dashboard</a></li>
-                            <li><i class="fa fa-home" aria-hidden="true"></i><a href="#">test</a></li>
+                            <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Students</a></li>
                         </ul>
                     </div>
                 </div>
@@ -24,7 +24,6 @@
             <a href="#" class="scroll-to-top"><i class="fa fa-angle-double-up"></i></a>
         </div>
     </div>
-   
 
 <?php
 

@@ -15,7 +15,7 @@ $(function () {
     "hideMethod": "fadeOut"
     };
 
-    toastr.info('Enjoy it!', '<h5 style="margin-top: 0px; margin-bottom: 5px;"><b>This is Helsinki Template!</b></h5>');
+    toastr.info('Enjoy it!', '<h5 style="margin-top: 0px; margin-bottom: 5px;"><b>Joymania</b></h5>');
 
     //AREA CHART EXAMPLE
     // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
