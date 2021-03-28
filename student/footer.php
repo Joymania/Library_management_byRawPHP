@@ -17,6 +17,10 @@
     <script src="../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!--Examples-->
     <script src="../assets/javascripts/examples/dashboard.js"></script>
+    <script src="../assets/vendor/data-table/media/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/vendor/data-table/media/js/dataTables.bootstrap.min.js"></script>
+    <!--Examples-->
+    <script src="../assets/javascripts/examples/tables/data-tables.js"></script>
 </body>
 
 

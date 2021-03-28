@@ -120,6 +120,8 @@
                                     <li <?php if($url_name=='manage_books.php') echo 'class="active-item"' ?>><a  href="manage_books.php">Manage Books</a></li>
                                 </ul>
                             </li>
+                            <li  <?php if($url_name=='issue_books.php') echo 'class="active-item"' ?> ><a href="issue_books.php"><i class="fa fa-books" aria-hidden="true"></i><span>Issue Books</span></a></li>
+                            <li  <?php if($url_name=='return_books.php') echo 'class="active-item"' ?> ><a href="return_books.php"><i class="fa fa-books" aria-hidden="true"></i><span>Return Books</span></a></li>
 
                             </ul>
                         </nav>

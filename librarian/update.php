@@ -8,8 +8,6 @@
 
     $update_value=mysqli_query($con,"SELECT * FROM `books` WHERE `id`=$id");
     $row=mysqli_fetch_assoc($update_value);
-    print_r($_POST);
-    
   
     if(isset($_POST['save_book'])){
         $id=$_POST['id'];

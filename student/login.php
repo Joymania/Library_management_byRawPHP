@@ -17,6 +17,8 @@
             if(($password ==$row['confirmpassword'])){
                 if($row['status']==1){
                     header('location:index.php');
+                    $_SESSION['student_id']=$row['id'];
+
 
                 }
                 else{

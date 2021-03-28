@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../assets/vendor/magnific-popup/magnific-popup.css">
 
     <link rel="stylesheet" href="../assets/stylesheets/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/data-table/media/css/dataTables.bootstrap.min.css">
 
 
 </head>
@@ -80,7 +81,7 @@
                 <div class="header-separator"></div>
                 <!--Log out -->
                 <div class="header-section">
-                    <a href="../librarian/logout.php" data-toggle="tooltip" data-placement="left" title="Logout"><i class="fa fa-sign-out log-out" aria-hidden="true"></i></a>
+                    <a href="logout.php" data-toggle="tooltip" data-placement="left" title="Logout"><i class="fa fa-sign-out log-out" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
